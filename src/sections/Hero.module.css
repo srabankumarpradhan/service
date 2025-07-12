@@ -1,0 +1,40 @@
+/* 🌀 Wavy Background */
+.stripBackground {
+  background: repeating-linear-gradient(
+    135deg,
+    #1e3a8a 0px,
+    #1e3a8a 20px,
+    #3b82f6 20px,
+    #3b82f6 40px
+  );
+  animation: waveStripes 20s ease-in-out infinite alternate;
+  opacity: 0.3;
+  filter: blur(12px);
+}
+
+@keyframes waveStripes {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 100%;
+  }
+}
+
+/* 🔁 Flowing image showcase */
+.imageLoop {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: max-content;
+  animation: scrollImages 90s linear infinite;
+}
+
+@keyframes scrollImages {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

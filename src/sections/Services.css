@@ -1,0 +1,32 @@
+/* Remove scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Border dash animation */
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-dash {
+  border-style: dashed !important;
+  animation: dash-border 1s linear infinite;
+  background-clip: padding-box;
+}
+
+@keyframes dash-border {
+  0% {
+    border-image: repeating-linear-gradient(90deg, #3b82f6 0, #3b82f6 5px, transparent 5px, transparent 10px);
+    border-image-slice: 1;
+  }
+  100% {
+    border-image: repeating-linear-gradient(90deg, transparent 0, transparent 5px, #3b82f6 5px, #3b82f6 10px);
+    border-image-slice: 1;
+  }
+}

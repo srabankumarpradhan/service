@@ -1,0 +1,12 @@
+/* Add to About.css or use Tailwind utilities directly */
+.carousel-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: #cbd5e0;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: #2563eb;
+}
